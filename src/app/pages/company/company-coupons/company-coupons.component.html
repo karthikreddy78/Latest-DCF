@@ -1,0 +1,46 @@
+
+
+
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 padding-1" *ngFor="let coupon of couponList; index as ind">
+                <mat-card class="example-card">
+                    <!-- <mat-card-header class="text-center">
+                        <div class="container-fluid icon mleft-0 ">
+                            <img [src]="coupon.image" style="border: none; width: 100%;">
+                        </div>
+                    </mat-card-header> -->
+                    <img mat-card-image [src]="coupon.image" class="photo" alt="Photo of Coupon">
+ 
+                    <mat-card-content>
+        
+                        <mat-action-list>
+                            
+                            <mat-list-item class="mt"><mat-icon mat-list-icon class="mat-18">badge</mat-icon>{{ coupon.code }}</mat-list-item>
+                            <mat-list-item class="mt">
+                                <mat-icon mat-list-icon class="mat-18">email</mat-icon>{{ coupon.company }}
+                            </mat-list-item>
+                            <mat-list-item class="mt"><mat-icon mat-list-icon class="mat-18">face</mat-icon>{{ coupon.category }}</mat-list-item>
+                            <mat-list-item class="mt"><mat-icon mat-list-icon class="mat-18">play_arrow</mat-icon>{{ coupon.couponname }}</mat-list-item>
+                            <mat-list-item class="mt"><mat-icon mat-list-icon class="mat-18">play_arrow</mat-icon>{{ coupon.description }}</mat-list-item>
+                      
+                        </mat-action-list>
+                    </mat-card-content>
+                    <mat-card-actions class="text-center mb">
+                        <div>
+                            <button mat-raised-button class="full-width" (click)="updateCoupon(coupon)" style="margin-bottom: 20px;">Update</button>
+      
+                        </div>
+                        <div>
+                            <button mat-raised-button class="full-width" (click)="deleteCoupon(coupon)" color="warn">Delete</button>
+       
+                        </div>
+                  </mat-card-actions>
+                     
+                  </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>

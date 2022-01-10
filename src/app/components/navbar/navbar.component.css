@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.bg-tool-bar
+{
+    /* background-color: rgb(32, 86, 167); */
+    background-color: rgb(201, 81, 151);
+}
